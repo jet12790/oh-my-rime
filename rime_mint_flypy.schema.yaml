@@ -145,10 +145,10 @@ translator:
   prism: rime_mint_flypy     # 多方案共用一个词库时，为避免冲突，需要用 prism 指定一个名字。
   spelling_hints: 8              # corrector.lua ：为了让错音错字提示的 Lua 同时适配全拼双拼，将拼音显示在 comment 中
   always_show_comments: true     # corrector.lua ：Rime 默认在 preedit 等于 comment 时取消显示 comment，这里强制一直显示，供 corrector.lua 做判断用。
-  preedit_format:
-    - xform/([nl])v/$1ü/
-    - xform/([nl])ue/$1üe/
-    - xform/([jqxy])v/$1u/
+  preedit_format: {} # 不将输入框中的双拼转换为全拼
+    # - xform/([nl])v/$1ü/
+    # - xform/([nl])ue/$1üe/
+    # - xform/([jqxy])v/$1u/
   initial_quality: 1.2
 
 melt_eng:
