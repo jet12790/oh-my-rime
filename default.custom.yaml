@@ -9,7 +9,6 @@ patch:
   'menu/page_size': 9
   schema_list:
     - { schema: double_pinyin_flypy } # 小鹤双拼
-    - { schema: rime_mint_flypy } # 薄荷拼音-小鹤混输方案
   'switcher/hotkeys':
     - 'Control+grave'
   'translator/enable_encoder': true
