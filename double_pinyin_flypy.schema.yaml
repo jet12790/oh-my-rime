@@ -375,4 +375,4 @@ key_binder:
     - { when: always, accept: Control+period, toggle: ascii_punct } # 切换中/西文标点
 menu:
   # 候选词个数
-  page_size: 6
+  page_size: 9
