@@ -16,10 +16,11 @@
 
 ## Oh-my-rime 指南
 
-rime 配置教程：
+Rime 配置教程：
 
 - [跨平台的开源输入法 Rime 定制指南，打造强大的个性化输入法](https://www.mintimate.cn/2023/03/18/rimeQuickInit)
-- [Bilibili 視頻: https://www.bilibili.com/video/BV12M411T7gf](https://www.bilibili.com/video/BV12M411T7gf)
+- [Bilibili 视频(macOS/Windows/Linux): https://www.bilibili.com/video/BV12M411T7gf](https://www.bilibili.com/video/BV12M411T7gf)
+- [Bilibili 视频(iOS/Android): https://www.bilibili.com/video/BV1Mr42137Ns](https://www.bilibili.com/video/BV1Mr42137Ns)
 - [Youtube 視頻: https://www.youtube.com/watch?v=yc4AivDDpMM](https://www.youtube.com/watch?v=yc4AivDDpMM)
 
 如果你有 QQ 帐号，可以加入群聊（禁止广告）: 703260572
@@ -29,12 +30,18 @@ rime 配置教程：
 本输入方案内包含：
 
 - 薄荷拼音-全拼输入: 全拼输入，适合的人群最多，所以也是默认的输入；
-- 小鹤双拼-薄荷定制: 基于小鹤双拼，添加定制内容。支持输入音形(形码)；
+- 小鹤双拼-薄荷定制: 基于小鹤双拼，添加定制内容。支持输入音形(形码)作为辅助输入；
 - 薄荷拼音-小鹤混输: 全拼输入的同时，支持小鹤双拼；
 - 地球拼音-薄荷定制: 基于地球拼音，添加定制内容，扩展海量词库；
-- 五笔九八-薄荷简版: 基于五笔 98 的精简版本，期待大家的 PR。
+- 五笔 98-五笔小筑: 基于[98wubi](https://github.com/yanhuacuo/98wubi)的精简版本，期待大家的 PR。如果想要更好的体验(五笔、拼音混输入等)，欢迎使用五笔 98 团队做的[五笔 98](https://github.com/yanhuacuo/98wubi)；
+- 五笔 86-极点五笔: 基于[wubi86-jidian](https://github.com/KyleBing/rime-wubi86-jidian)的精简版本，期待大家的 PR。如果想要更好的体验(五笔、拼音混输入等)，欢迎使用[rime-wubi86-jidian](https://github.com/KyleBing/rime-wubi86-jidian)；
+- 仓九宫格-全拼输入: 基于「薄荷拼音-全拼输入」，适用于在 iOS 仓输入法内使用九宫格；如果有其他方案的九宫格需求，可以基于本方案修改。
 
 你可以在安装后，使用『Ctrl』+『~』进行切换。（默认激活的是『薄荷拼音-全拼输入』）。
+
+目前薄荷内自带两套皮肤： 水鸭系列、青涩系列。大家可以在鼠须管和小狼毫的个性化配置内自由选择激活，也可以使用自己的配色（推荐[使用 custom 对薄荷配置进行覆写](https://www.mintimate.cc/zh/guide/configurationOverride.html#%E4%BF%AE%E6%94%B9%E8%96%84%E8%8D%B7%E8%BE%93%E5%85%A5%E6%B3%95%E7%9A%84%E9%85%8D%E7%BD%AE)）。
+
+![显示效果](https://www.mintimate.cc/image/demo/themeOfOhMyRime.webp)
 
 ### 安装
 
@@ -69,13 +76,15 @@ rime 配置教程：
   - Squirrel: `$TMPDIR`
 - Linux
   - iBus:` /tmp`
-  
-如果你需要在同文输入法内使用，需要一个键盘模板和皮肤，可以使用: [薄荷输入法的”蓝水鸭“和”黑水鸭“皮肤布局](https://www.mintimate.cc/zh/demo/diffAppearance.html#android%E5%A4%96%E8%A7%82)
+
+仓输入法 Hamster 内如何使用九宫格输入？
+
+薄荷方案内，基于[Hamster](https://github.com/imfuxiao/Hamster/) 九宫格布局和[雾凇九宫格](https://github.com/iDvel/rime-ice/blob/main/t9.schema.yaml)移植了九宫格。需要同时启用九宫格方案（输入方案设置）和九宫格布局（键盘设置 - 键盘布局 - 中文 9 键）。
 
 ## 配置文件说明
 
-- `default.custom.yaml` 设置输入法、如何切换输入法、翻页等
-- `squirrel.yaml` 鼠须管( Mac 版本 )设置哪些软件默认英文输入，输入法皮肤等；如需自定义，建议自行创建`squirrel.custom.yaml`来覆写。 
+- `default.yaml` 设置输入法、如何切换输入法、翻页等；建议自行创建`default.custom.yaml`来覆写薄荷配置的`default.yaml`.
+- `squirrel.yaml` 鼠须管( Mac 版本 )设置哪些软件默认英文输入，输入法皮肤等；如需自定义，建议自行创建`squirrel.custom.yaml`来覆写。
 - `weasel.yaml` 小狼毫( Win 版本 )设置哪些软件默认英文输入，输入法皮肤等；如需自定义，建议自行创建`weasel.custom.yaml`来覆写。
 
 配置文件中大部分都有注释，配合教程：[配置覆写](https://www.mintimate.cc/zh/guide/configurationOverride.html)
@@ -86,6 +95,7 @@ rime 配置教程：
 
 - [雾凇拼音词库](https://github.com/iDvel/rime-ice)
 - [98 五笔词库](https://github.com/yanhuacuo/98wubi-tables)
+- [86 五笔词库](https://github.com/KyleBing/rime-wubi86-jidian)
 
 详细说明：
 
@@ -105,12 +115,13 @@ dicts
 ├── terra_pinyin_base.dict.yaml     # 地球拼音自带词库
 ├── terra_pinyin_ext.dict.yaml      # 地球拼音自带词库
 ├── terra_rime_ice.base.dict.yaml   # 基于Python脚本自动转换雾凇并Action自动更新
-└── wubi98_base.dict.yaml           # 五笔基础词库
+├── wubi86_core.dict.yaml           # 86版五笔基础词库
+└── wubi98_base.dict.yaml           # 98版五笔基础词库
 ```
 
 后续更新词库；可以下载本仓库`dicts`内的文件，除了`custom_simple.dict.yaml`的文件，其他都进行覆盖替换即可。
 
-如果想自己扩展词库，可以在输入法的字典配置文件内进行导入，比如薄荷拼音字典配置文件[rime_mint.dict.yaml](rime_mint.dict.yaml)内：
+如果想自己扩展词库，可以在输入法的字典配置文件内进行导入，比如「薄荷拼音-全拼输入」的字典配置文件[rime_mint.dict.yaml](rime_mint.dict.yaml)内：
 
 ```yaml
 ---
@@ -146,10 +157,13 @@ import_tables:
 3. [rime-setting](https://github.com/Iorest/rime-setting)
 4. [雾凇拼音 | 长期维护的简体词库](https://github.com/iDvel/rime-ice)
 5. [rime-radical-pinyin | Rime 部件拆字输入方案（全拼双拼）](https://github.com/mirtlecn/rime-radical-pinyin)
+6. [86 五笔极点码表](https://github.com/KyleBing/rime-wubi86-jidian)
+7. [Extending RIME with Lua scripts](https://github.com/hchunhui/librime-lua/wiki/Scripting)
 
 ## 推荐项目
 
-- [98 五笔，十分好用的五笔输入方案](http://www.98wubi.com/)
+- [98 五笔，十分好用的 98 五笔输入方案](http://www.98wubi.com/)
+- [86 五笔极点码表，rime 上的 86 五笔方案](https://github.com/KyleBing/rime-wubi86-jidian)
 - [雾凇拼音，很优秀的中文词库](https://github.com/iDvel/rime-ice)
 
 > 尤其是雾凇拼音，本方案配置中，大量参考参考了雾凇拼音。词库部分，使用 Python 同步雾凇拼音的基础词库并启用雾凇拼音默认没有启用的 ext 扩展词库。
